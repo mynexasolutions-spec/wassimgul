@@ -36,7 +36,7 @@ export default function UploadFileForm({ caseId, caseNumber }) {
     }
 
     if (file.size > 50 * 1024 * 1024) {
-      setError('File is too large (50MB maximum limit).');
+      setError('File is too large (25MB maximum limit).');
       return;
     }
 
@@ -108,7 +108,7 @@ export default function UploadFileForm({ caseId, caseNumber }) {
       <input type="hidden" name="caseNumber" value={caseNumber || ''} />
       <div className="upload-row">
         <div className="f">
-          <label htmlFor="file">Upload Case File (PDF or Image, up to 50MB)</label>
+          <label htmlFor="file">Upload Case File (PDF or Image, up to 25MB)</label>
           <input
             id="file"
             name="file"

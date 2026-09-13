@@ -166,7 +166,7 @@ export async function uploadCaseFile(prevState, formData) {
     return { error: 'Only image (JPG, PNG, WebP, GIF, SVG) and PDF files can be uploaded.' };
   }
   if (file.size > MAX_FILE_BYTES) {
-    return { error: 'File is too large (50MB max).' };
+    return { error: 'File is too large (25MB max).' };
   }
 
   const supabase = await createClient();

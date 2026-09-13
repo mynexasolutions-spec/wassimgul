@@ -25,7 +25,7 @@ export async function POST(request) {
     }
 
     if (file.size > MAX_FILE_BYTES) {
-      return NextResponse.json({ error: 'File is too large (50MB max).' }, { status: 400 });
+      return NextResponse.json({ error: 'File is too large (25MB max).' }, { status: 400 });
     }
 
     const supabase = await createClient();
